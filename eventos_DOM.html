@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        div#dv{
+            background-color: blue;
+            color: white;
+            height: 20rem;
+            width: 20rem;
+            margin-top: 3rem;
+            margin-left: 5rem;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 300px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+    <div id="dv">
+        Evento...
+    </div>
     
+
+    <script>
+        var txt1 = document.getElementById('dv')
+        txt1.addEventListener('click', cck);
+        txt1.addEventListener('mouseenter', enter);
+        txt1.addEventListener('mouseout', exit);
+
+
+        function cck(){
+           txt1.innerText = 'clicou';
+           txt1.style.backgroundColor = 'yellow';
+           txt1.style.color = 'black';
+        }
+
+        function enter(){
+            txt1.innerText = 'Entrou';
+        }
+
+        function exit(){
+            txt1.innerText = 'Saiu';
+            txt1.style.backgroundColor = 'blue';
+        }
+    </script>
 </body>
 </html>
