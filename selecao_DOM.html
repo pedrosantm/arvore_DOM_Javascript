@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Esta é uma página para prática de seleção utilizando a Árvore DOM</h1>
+    <p>Parágrafo 1</p>
+    <p class="parg2">Parágrafo 2</p>
+    <div id="Div1">Div</div>
+
+    <script>
+        var p1 = document.getElementsByTagName('p')[0];//seleção por tag-name
+        document.write("Reescrevendo o primeiro parágrafo: " + p1.innerText);
+
+        var p2 = document.querySelector('.parg2');//seleção por querryselector(CSS)
+        document.write("Reescrevendo o segundo parágrafo: " + p2.innerText);
+
+        var dv = document.querySelector('#Div1');//seleção por querryselector(CSS)
+        document.write("Reescrevendo a div: " + dv.innerText);
+    </script>
+</body>
+</html>
